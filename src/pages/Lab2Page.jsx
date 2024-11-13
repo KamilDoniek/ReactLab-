@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import PersonalInfo from "../components/PersonalInfo";
+import FlexContainer from "../components/FlexContainerPersonal";
 
 function Lab2Page({names}){
     const {id} = useParams();

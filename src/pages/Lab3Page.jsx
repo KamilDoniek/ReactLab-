@@ -5,7 +5,7 @@ const Lab3Page = () =>{
     return (
         <div>
           <h1>Lab 03</h1>
-          <FlexContainer element={Element} data={data} />
+          <FlexContainer Element={Element} data={data} />
         </div>
       );
     }
