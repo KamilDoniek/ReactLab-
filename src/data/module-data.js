@@ -1,701 +1,801 @@
 export const data = [
 {
  id: 1,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"amber"
+ name: "Joanna",
+ birth: "2005-01-15",
+ eyes:"hazel",
+ rating: 8
 },
 
 {
  id: 2,
- name: "Stefan",
+ name: "Ewa",
  birth: "2005-02-24",
- eyes:"grey"
+ eyes:"blue",
+ rating: 7
 },
 
 {
  id: 3,
- name: "Stefan",
+ name: "Anna",
  birth: "1953-11-10",
- eyes:"black"
+ eyes:"grey",
+ rating: 0
 },
 
 {
  id: 4,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"green"
+ name: "Adam",
+ birth: "2000-10-10",
+ eyes:"black",
+ rating: 9
 },
 
 {
  id: 5,
  name: "Karol",
- birth: "1965-09-19",
- eyes:"green"
+ birth: "2005-01-15",
+ eyes:"amber",
+ rating: 0
 },
 
 {
  id: 6,
  name: "Anna",
- birth: "2005-02-24",
- eyes:"amber"
+ birth: "1965-09-19",
+ eyes:"amber",
+ rating: 7
 },
 
 {
  id: 7,
- name: "Karol",
+ name: "Stefan",
  birth: "1989-05-19",
- eyes:"amber"
+ eyes:"green",
+ rating: 8
 },
 
 {
  id: 8,
- name: "Karol",
- birth: "1965-09-19",
- eyes:"grey"
+ name: "Anna",
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 1
 },
 
 {
  id: 9,
- name: "Anna",
- birth: "2000-10-10",
- eyes:"blue"
+ name: "Ewa",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 6
 },
 
 {
  id: 10,
- name: "Stefan",
+ name: "Karol",
  birth: "1989-05-19",
- eyes:"blue"
+ eyes:"green",
+ rating: 7
 },
 
 {
  id: 11,
- name: "Adam",
+ name: "Ewa",
  birth: "2000-10-10",
- eyes:"grey"
+ eyes:"black",
+ rating: 8
 },
 
 {
  id: 12,
- name: "Karol",
- birth: "1989-05-19",
- eyes:"blue"
+ name: "Adam",
+ birth: "1953-11-10",
+ eyes:"grey",
+ rating: 3
 },
 
 {
  id: 13,
  name: "Stefan",
- birth: "2005-02-24",
- eyes:"hazel"
+ birth: "1965-09-19",
+ eyes:"hazel",
+ rating: 7
 },
 
 {
  id: 14,
- name: "Stefan",
- birth: "1953-11-10",
- eyes:"green"
+ name: "Joanna",
+ birth: "2005-01-15",
+ eyes:"black",
+ rating: 5
 },
 
 {
  id: 15,
- name: "Stefan",
- birth: "2005-01-15",
- eyes:"grey"
+ name: "Joanna",
+ birth: "1965-09-19",
+ eyes:"blue",
+ rating: 6
 },
 
 {
  id: 16,
- name: "Stefan",
+ name: "Joanna",
  birth: "2005-02-24",
- eyes:"amber"
+ eyes:"blue",
+ rating: 9
 },
 
 {
  id: 17,
- name: "Joanna",
- birth: "2005-01-15",
- eyes:"black"
+ name: "Ewa",
+ birth: "1989-05-19",
+ eyes:"grey",
+ rating: 8
 },
 
 {
  id: 18,
- name: "Anna",
- birth: "2005-02-24",
- eyes:"amber"
+ name: "Ewa",
+ birth: "2005-01-15",
+ eyes:"green",
+ rating: 3
 },
 
 {
  id: 19,
  name: "Adam",
- birth: "1989-05-19",
- eyes:"grey"
+ birth: "1999-10-11",
+ eyes:"blue",
+ rating: 9
 },
 
 {
  id: 20,
  name: "Stefan",
- birth: "1953-11-10",
- eyes:"green"
+ birth: "2005-01-15",
+ eyes:"black",
+ rating: 7
 },
 
 {
  id: 21,
- name: "Adam",
- birth: "1965-09-19",
- eyes:"amber"
+ name: "Stefan",
+ birth: "1999-10-11",
+ eyes:"black",
+ rating: 0
 },
 
 {
  id: 22,
  name: "Adam",
- birth: "2000-10-10",
- eyes:"blue"
+ birth: "2005-02-24",
+ eyes:"blue",
+ rating: 1
 },
 
 {
  id: 23,
- name: "Adam",
- birth: "1965-09-19",
- eyes:"amber"
+ name: "Anna",
+ birth: "2005-02-24",
+ eyes:"blue",
+ rating: 3
 },
 
 {
  id: 24,
- name: "Karol",
- birth: "2000-10-10",
- eyes:"green"
+ name: "Stefan",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 0
 },
 
 {
  id: 25,
- name: "Anna",
- birth: "2005-02-24",
- eyes:"green"
+ name: "Stefan",
+ birth: "1999-10-11",
+ eyes:"grey",
+ rating: 8
 },
 
 {
  id: 26,
- name: "Joanna",
- birth: "2000-10-10",
- eyes:"amber"
+ name: "Karol",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 4
 },
 
 {
  id: 27,
- name: "Adam",
- birth: "1953-11-10",
- eyes:"hazel"
+ name: "Ewa",
+ birth: "2000-10-10",
+ eyes:"black",
+ rating: 4
 },
 
 {
  id: 28,
  name: "Anna",
- birth: "2000-10-10",
- eyes:"blue"
+ birth: "1953-11-10",
+ eyes:"blue",
+ rating: 8
 },
 
 {
  id: 29,
- name: "Ewa",
- birth: "1965-09-19",
- eyes:"blue"
+ name: "Stefan",
+ birth: "2000-10-10",
+ eyes:"black",
+ rating: 6
 },
 
 {
  id: 30,
- name: "Stefan",
+ name: "Joanna",
  birth: "1965-09-19",
- eyes:"blue"
+ eyes:"green",
+ rating: 7
 },
 
 {
  id: 31,
- name: "Joanna",
- birth: "2005-02-24",
- eyes:"blue"
+ name: "Karol",
+ birth: "2005-01-15",
+ eyes:"hazel",
+ rating: 7
 },
 
 {
  id: 32,
- name: "Anna",
- birth: "2005-01-15",
- eyes:"amber"
+ name: "Joanna",
+ birth: "2000-10-10",
+ eyes:"amber",
+ rating: 1
 },
 
 {
  id: 33,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"grey"
+ name: "Adam",
+ birth: "2005-02-24",
+ eyes:"amber",
+ rating: 1
 },
 
 {
  id: 34,
  name: "Adam",
- birth: "1989-05-19",
- eyes:"blue"
+ birth: "2005-01-15",
+ eyes:"blue",
+ rating: 2
 },
 
 {
  id: 35,
- name: "Karol",
- birth: "2005-01-15",
- eyes:"blue"
+ name: "Joanna",
+ birth: "2000-10-10",
+ eyes:"hazel",
+ rating: 3
 },
 
 {
  id: 36,
- name: "Ewa",
+ name: "Anna",
  birth: "1965-09-19",
- eyes:"grey"
+ eyes:"hazel",
+ rating: 6
 },
 
 {
  id: 37,
- name: "Ewa",
- birth: "2005-02-24",
- eyes:"green"
+ name: "Karol",
+ birth: "1999-10-11",
+ eyes:"green",
+ rating: 3
 },
 
 {
  id: 38,
- name: "Stefan",
- birth: "1999-10-11",
- eyes:"grey"
+ name: "Joanna",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 6
 },
 
 {
  id: 39,
- name: "Anna",
- birth: "1989-05-19",
- eyes:"amber"
+ name: "Karol",
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 5
 },
 
 {
  id: 40,
  name: "Stefan",
- birth: "1989-05-19",
- eyes:"grey"
+ birth: "2000-10-10",
+ eyes:"hazel",
+ rating: 1
 },
 
 {
  id: 41,
- name: "Anna",
- birth: "1953-11-10",
- eyes:"black"
+ name: "Karol",
+ birth: "1999-10-11",
+ eyes:"green",
+ rating: 6
 },
 
 {
  id: 42,
- name: "Ewa",
- birth: "2005-01-15",
- eyes:"blue"
+ name: "Anna",
+ birth: "1965-09-19",
+ eyes:"hazel",
+ rating: 7
 },
 
 {
  id: 43,
- name: "Stefan",
- birth: "1965-09-19",
- eyes:"grey"
+ name: "Adam",
+ birth: "2005-02-24",
+ eyes:"hazel",
+ rating: 9
 },
 
 {
  id: 44,
  name: "Anna",
- birth: "1999-10-11",
- eyes:"green"
+ birth: "1965-09-19",
+ eyes:"blue",
+ rating: 6
 },
 
 {
  id: 45,
- name: "Stefan",
- birth: "1999-10-11",
- eyes:"green"
+ name: "Ewa",
+ birth: "2000-10-10",
+ eyes:"amber",
+ rating: 8
 },
 
 {
  id: 46,
- name: "Stefan",
- birth: "1989-05-19",
- eyes:"blue"
+ name: "Anna",
+ birth: "1999-10-11",
+ eyes:"green",
+ rating: 7
 },
 
 {
  id: 47,
- name: "Anna",
+ name: "Stefan",
  birth: "1989-05-19",
- eyes:"green"
+ eyes:"grey",
+ rating: 8
 },
 
 {
  id: 48,
- name: "Joanna",
- birth: "1999-10-11",
- eyes:"blue"
+ name: "Ewa",
+ birth: "2005-01-15",
+ eyes:"grey",
+ rating: 9
 },
 
 {
  id: 49,
  name: "Karol",
  birth: "1999-10-11",
- eyes:"hazel"
+ eyes:"blue",
+ rating: 8
 },
 
 {
  id: 50,
- name: "Ewa",
- birth: "1965-09-19",
- eyes:"green"
+ name: "Stefan",
+ birth: "1999-10-11",
+ eyes:"grey",
+ rating: 4
 },
 
 {
  id: 51,
- name: "Adam",
- birth: "1999-10-11",
- eyes:"green"
+ name: "Ewa",
+ birth: "1989-05-19",
+ eyes:"hazel",
+ rating: 3
 },
 
 {
  id: 52,
  name: "Anna",
- birth: "2005-02-24",
- eyes:"green"
+ birth: "1999-10-11",
+ eyes:"hazel",
+ rating: 1
 },
 
 {
  id: 53,
- name: "Joanna",
- birth: "1999-10-11",
- eyes:"black"
+ name: "Anna",
+ birth: "2000-10-10",
+ eyes:"grey",
+ rating: 3
 },
 
 {
  id: 54,
  name: "Joanna",
- birth: "1999-10-11",
- eyes:"hazel"
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 4
 },
 
 {
  id: 55,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"amber"
+ name: "Karol",
+ birth: "2005-01-15",
+ eyes:"green",
+ rating: 3
 },
 
 {
  id: 56,
- name: "Karol",
- birth: "2005-01-15",
- eyes:"hazel"
+ name: "Stefan",
+ birth: "2005-02-24",
+ eyes:"grey",
+ rating: 7
 },
 
 {
  id: 57,
- name: "Joanna",
+ name: "Ewa",
  birth: "1989-05-19",
- eyes:"grey"
+ eyes:"black",
+ rating: 5
 },
 
 {
  id: 58,
- name: "Joanna",
+ name: "Anna",
  birth: "1989-05-19",
- eyes:"black"
+ eyes:"hazel",
+ rating: 6
 },
 
 {
  id: 59,
  name: "Karol",
  birth: "1989-05-19",
- eyes:"grey"
+ eyes:"blue",
+ rating: 3
 },
 
 {
  id: 60,
- name: "Adam",
- birth: "2005-02-24",
- eyes:"amber"
+ name: "Ewa",
+ birth: "2005-01-15",
+ eyes:"amber",
+ rating: 5
 },
 
 {
  id: 61,
- name: "Ewa",
+ name: "Stefan",
  birth: "2000-10-10",
- eyes:"blue"
+ eyes:"amber",
+ rating: 6
 },
 
 {
  id: 62,
- name: "Karol",
- birth: "2005-01-15",
- eyes:"black"
+ name: "Stefan",
+ birth: "1989-05-19",
+ eyes:"green",
+ rating: 0
 },
 
 {
  id: 63,
  name: "Ewa",
- birth: "1965-09-19",
- eyes:"amber"
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 4
 },
 
 {
  id: 64,
- name: "Anna",
- birth: "2005-02-24",
- eyes:"amber"
+ name: "Joanna",
+ birth: "2000-10-10",
+ eyes:"blue",
+ rating: 2
 },
 
 {
  id: 65,
  name: "Ewa",
  birth: "2005-01-15",
- eyes:"grey"
+ eyes:"green",
+ rating: 3
 },
 
 {
  id: 66,
- name: "Stefan",
- birth: "1999-10-11",
- eyes:"black"
+ name: "Adam",
+ birth: "1965-09-19",
+ eyes:"blue",
+ rating: 7
 },
 
 {
  id: 67,
- name: "Joanna",
- birth: "2005-01-15",
- eyes:"grey"
+ name: "Stefan",
+ birth: "1999-10-11",
+ eyes:"green",
+ rating: 0
 },
 
 {
  id: 68,
- name: "Stefan",
- birth: "1989-05-19",
- eyes:"grey"
+ name: "Anna",
+ birth: "2000-10-10",
+ eyes:"grey",
+ rating: 4
 },
 
 {
  id: 69,
- name: "Adam",
- birth: "2005-01-15",
- eyes:"blue"
+ name: "Stefan",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 0
 },
 
 {
  id: 70,
- name: "Ewa",
- birth: "2005-02-24",
- eyes:"blue"
+ name: "Karol",
+ birth: "2000-10-10",
+ eyes:"hazel",
+ rating: 1
 },
 
 {
  id: 71,
- name: "Joanna",
+ name: "Stefan",
  birth: "1965-09-19",
- eyes:"blue"
+ eyes:"blue",
+ rating: 1
 },
 
 {
  id: 72,
- name: "Anna",
- birth: "2000-10-10",
- eyes:"hazel"
+ name: "Ewa",
+ birth: "2005-01-15",
+ eyes:"grey",
+ rating: 7
 },
 
 {
  id: 73,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"black"
+ name: "Karol",
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 7
 },
 
 {
  id: 74,
- name: "Karol",
- birth: "1965-09-19",
- eyes:"amber"
+ name: "Stefan",
+ birth: "1989-05-19",
+ eyes:"hazel",
+ rating: 1
 },
 
 {
  id: 75,
- name: "Stefan",
- birth: "2005-02-24",
- eyes:"hazel"
+ name: "Karol",
+ birth: "2000-10-10",
+ eyes:"hazel",
+ rating: 8
 },
 
 {
  id: 76,
- name: "Anna",
- birth: "2005-02-24",
- eyes:"amber"
+ name: "Stefan",
+ birth: "2005-01-15",
+ eyes:"green",
+ rating: 2
 },
 
 {
  id: 77,
- name: "Ewa",
+ name: "Adam",
  birth: "1999-10-11",
- eyes:"blue"
+ eyes:"black",
+ rating: 5
 },
 
 {
  id: 78,
- name: "Anna",
- birth: "1999-10-11",
- eyes:"amber"
+ name: "Ewa",
+ birth: "2000-10-10",
+ eyes:"black",
+ rating: 8
 },
 
 {
  id: 79,
- name: "Karol",
- birth: "2005-01-15",
- eyes:"amber"
+ name: "Adam",
+ birth: "1999-10-11",
+ eyes:"green",
+ rating: 9
 },
 
 {
  id: 80,
- name: "Stefan",
- birth: "2005-02-24",
- eyes:"green"
+ name: "Ewa",
+ birth: "1999-10-11",
+ eyes:"hazel",
+ rating: 2
 },
 
 {
  id: 81,
- name: "Joanna",
- birth: "1965-09-19",
- eyes:"hazel"
+ name: "Ewa",
+ birth: "1953-11-10",
+ eyes:"grey",
+ rating: 8
 },
 
 {
  id: 82,
- name: "Karol",
- birth: "2005-02-24",
- eyes:"blue"
+ name: "Ewa",
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 8
 },
 
 {
  id: 83,
- name: "Ewa",
- birth: "1989-05-19",
- eyes:"hazel"
+ name: "Stefan",
+ birth: "2000-10-10",
+ eyes:"grey",
+ rating: 8
 },
 
 {
  id: 84,
- name: "Adam",
- birth: "1953-11-10",
- eyes:"grey"
+ name: "Stefan",
+ birth: "1989-05-19",
+ eyes:"grey",
+ rating: 3
 },
 
 {
  id: 85,
- name: "Adam",
- birth: "2005-01-15",
- eyes:"black"
+ name: "Karol",
+ birth: "1999-10-11",
+ eyes:"black",
+ rating: 1
 },
 
 {
  id: 86,
- name: "Stefan",
- birth: "1953-11-10",
- eyes:"green"
+ name: "Karol",
+ birth: "1989-05-19",
+ eyes:"black",
+ rating: 8
 },
 
 {
  id: 87,
- name: "Karol",
- birth: "2005-02-24",
- eyes:"green"
+ name: "Adam",
+ birth: "1953-11-10",
+ eyes:"amber",
+ rating: 5
 },
 
 {
  id: 88,
  name: "Anna",
- birth: "2000-10-10",
- eyes:"hazel"
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 8
 },
 
 {
  id: 89,
- name: "Adam",
- birth: "1953-11-10",
- eyes:"amber"
+ name: "Joanna",
+ birth: "1989-05-19",
+ eyes:"hazel",
+ rating: 6
 },
 
 {
  id: 90,
- name: "Anna",
+ name: "Ewa",
  birth: "1953-11-10",
- eyes:"black"
+ eyes:"hazel",
+ rating: 4
 },
 
 {
  id: 91,
- name: "Ewa",
+ name: "Stefan",
  birth: "1999-10-11",
- eyes:"hazel"
+ eyes:"hazel",
+ rating: 4
 },
 
 {
  id: 92,
- name: "Ewa",
- birth: "2005-02-24",
- eyes:"green"
+ name: "Anna",
+ birth: "1953-11-10",
+ eyes:"green",
+ rating: 4
 },
 
 {
  id: 93,
  name: "Joanna",
- birth: "2005-02-24",
- eyes:"grey"
+ birth: "1999-10-11",
+ eyes:"black",
+ rating: 0
 },
 
 {
  id: 94,
- name: "Anna",
- birth: "2000-10-10",
- eyes:"hazel"
+ name: "Karol",
+ birth: "1965-09-19",
+ eyes:"hazel",
+ rating: 6
 },
 
 {
  id: 95,
- name: "Karol",
- birth: "1953-11-10",
- eyes:"green"
+ name: "Stefan",
+ birth: "2005-01-15",
+ eyes:"blue",
+ rating: 0
 },
 
 {
  id: 96,
- name: "Adam",
- birth: "1989-05-19",
- eyes:"grey"
+ name: "Karol",
+ birth: "1965-09-19",
+ eyes:"blue",
+ rating: 8
 },
 
 {
  id: 97,
- name: "Karol",
- birth: "2005-02-24",
- eyes:"blue"
+ name: "Stefan",
+ birth: "2000-10-10",
+ eyes:"amber",
+ rating: 5
 },
 
 {
  id: 98,
- name: "Stefan",
- birth: "1965-09-19",
- eyes:"black"
+ name: "Karol",
+ birth: "2000-10-10",
+ eyes:"hazel",
+ rating: 0
 },
 
 {
  id: 99,
- name: "Joanna",
- birth: "2005-01-15",
- eyes:"green"
+ name: "Ewa",
+ birth: "1989-05-19",
+ eyes:"blue",
+ rating: 2
 },
 
 {
  id: 100,
- name: "Stefan",
- birth: "2005-02-24",
- eyes:"blue"
+ name: "Adam",
+ birth: "2005-01-15",
+ eyes:"green",
+ rating: 6
 },
 ];
