@@ -1,4 +1,4 @@
-import FlexContainer from "../components/FlexContainerPersonal";
+import FlexContainerPersonal from "../components/FlexContainerPersonal";
 import { data } from "../data/module-data";
 import PersonInfo from "../components/PersonalInfo";
 
@@ -11,7 +11,7 @@ const Lab1Page = ({ names }) => {
                 <PersonalInfo key={o.id} {...o} />
             ))} */}
 
-            <FlexContainer element={PersonInfo} data={data} ></FlexContainer>
+            <FlexContainerPersonal element={PersonInfo} data={data} ></FlexContainerPersonal>
         </>
     );
 };

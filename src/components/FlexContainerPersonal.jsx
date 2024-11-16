@@ -1,7 +1,8 @@
 import { useReducer } from "react";
 import AppReducer from "../data/AppReducer";
 
-function FlexContainer({element,data}) {
+function FlexContainerPersonal({element,data}) {
+    
     const [state, dispatch] = useReducer(AppReducer, data);
 
     return ( 
@@ -11,4 +12,4 @@ function FlexContainer({element,data}) {
      );
 }
 
-export default FlexContainer;
+export default FlexContainerPersonal;
