@@ -11,6 +11,7 @@ function CreateForm() {
         e.preventDefault();
         const data = new FormData(e.target);
         const title = data.get("title");
+        console.log(title)
         setErrors([]);
         if(title.slice(0,1) !== title.slice(0,1).toUpperCase()) {
             err.push("Tytul zadania musi byc z wielkiej litery!")

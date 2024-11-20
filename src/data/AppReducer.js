@@ -1,3 +1,4 @@
+import { redirect } from "react-router-dom";
 
 
 export default function AppReducer(state,action){
@@ -10,8 +11,10 @@ export default function AppReducer(state,action){
             return [...state] 
         }
         case "Edit":
+            {
             console.log("edit")
             return state;
+            }
         case "delete":
             console.log("delete");
             return state.filter(item => item.id !== action.id);

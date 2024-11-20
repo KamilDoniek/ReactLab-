@@ -1,6 +1,6 @@
 import {data} from './data/module-data';
 import RootLayout from './layouts/RootLayout';
-import { Routes, Route, Outlet} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import  Lab1Page  from './pages/Lab1Page';
 import Lab2Page from './pages/Lab2Page';
 import Lab3Page from './pages/Lab3Page';
@@ -9,10 +9,15 @@ import EditForm from './components/EditForm';
 import Home from './pages/Home';
 import CreateForm from './components/CreateForm';
 import  {NotFound}  from './pages/NotFound';
+import AppContext from './data/AppContext';
+import AppReducer from './data/AppReducer';
+import { useReducer } from 'react'
+
 function App() {
-  
+  const [state, appDispatch] = useReducer(AppReducer, data);
+
   return (
-    <>
+    <AppContext.Provider value={{items: state, dispatch: appDispatch}}>
       <RootLayout >
           <Routes>
           <Route path="/lab1" element={<Lab1Page names= {data}/>}/>
@@ -26,7 +31,7 @@ function App() {
           </Routes>
       
       </RootLayout>
-    </>
+      </AppContext.Provider>
   )
 }
 
