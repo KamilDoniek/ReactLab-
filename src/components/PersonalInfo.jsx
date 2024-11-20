@@ -3,8 +3,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import RatingBar from './RatingBar';
-
-function PersonInfo ({id, name, birth, eyes,rating,dispatch}) {
+import { useContext } from 'react';
+import AppContext from '../data/AppContext';
+import { redirect } from 'react-router-dom';
+// function PersonInfo ({id, name, birth, eyes,rating,dispatch}) {
     // const [rating,setRating] = useState(0);
 
     // const handleRate = () => {
@@ -16,6 +18,10 @@ function PersonInfo ({id, name, birth, eyes,rating,dispatch}) {
     //     setRating(rating + 1); 
     //   }
     // }
+    // eslint-disable-next-line react/prop-types
+    function PersonInfo({ id, name, birth, eyes, rating }) {
+      const context = useContext(AppContext);
+      const dispatch = context.dispatch;
     return (
       <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -27,15 +33,9 @@ function PersonInfo ({id, name, birth, eyes,rating,dispatch}) {
                 <ListGroup.Item><RatingBar  rating={rating}></RatingBar></ListGroup.Item>
 
       </ListGroup>
-        <Button variant="primary" onClick={(e)=>dispatch({
-            type:"rate",
-            id:id,
-            rating:(rating+1)%11})} >
-          rate
-          </Button>
-          <Button variant="primary" >
-          Edit
-          </Button>
+      <Button variant="primary"  className="me-2" 
+        onClick={e => redirect("/lab4/edit")}>Edit</Button>
+      
         <Button 
             variant="danger"
            

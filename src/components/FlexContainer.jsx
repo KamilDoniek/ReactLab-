@@ -1,9 +1,13 @@
 import Element from "./Element";
 import { Row, Col } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
+import AppContext from '../data/AppContext';
+import { useContext } from 'react';
 
 
-function FlexContainer ({Element,data}) {
+function FlexContainer ({Element}) {
+  const context = useContext(AppContext);
+  const data = context.items;
 
     return (
 
