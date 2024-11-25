@@ -3,7 +3,7 @@ import { createContext } from "react";
 const AppContext = createContext(
     {
         items: [],
-        dispatch: ()=>{},
+        dispatch: null,
     }
 );
 

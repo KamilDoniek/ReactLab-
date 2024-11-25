@@ -1,4 +1,4 @@
-
+import React from 'react'
 import { useContext } from "react";
 import AppContext from "../data/AppContext";
 
@@ -9,7 +9,13 @@ function FlexContainerPersonal({element}) {
 
     return ( 
         <div className="d-flex justify-content-center flex-wrap mt-3">
-            { state.map(e => element({...e})) }
+            { state.map( e=>
+                <div key={e.id}>
+    {/* {element({ ...e })} */}
+    {React.createElement(element, { ...e })}
+
+  </div>
+) }
         </div>
      );
 }

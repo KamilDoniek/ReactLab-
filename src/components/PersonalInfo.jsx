@@ -1,11 +1,10 @@
-//import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import RatingBar from './RatingBar';
 import { useContext } from 'react';
 import AppContext from '../data/AppContext';
-import { useNavigate } from 'react-router-dom'; // import useNavigate from React Router
+import { useNavigate } from 'react-router-dom'; 
 
 // function PersonInfo ({id, name, birth, eyes,rating,dispatch}) {
     // const [rating,setRating] = useState(0);
@@ -21,10 +20,19 @@ import { useNavigate } from 'react-router-dom'; // import useNavigate from React
     // }
     // eslint-disable-next-line react/prop-types
     function PersonInfo({ id, name, birth, eyes, rating }) {
-      const navigate = useNavigate(); // Initialize the navigate function
-
+      const navigate = useNavigate(); 
       const context = useContext(AppContext);
       const dispatch = context.dispatch;
+
+      const handleEditClick = () => {
+        navigate(`/lab4/edit`, { state: { id, birth, eyes } });
+      };
+      const   handleDeleteClick = () => {
+        dispatch({
+          type: "delete",
+          id: id,
+        });
+      };
     return (
       <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -42,18 +50,14 @@ import { useNavigate } from 'react-router-dom'; // import useNavigate from React
             rating:(rating+1)%11})} >
           rate
           </Button>
-      <Button variant="primary"  className="me-2" 
-onClick={() => navigate("/lab4/edit")}
-
+          <Button variant="primary"  
+       //   onClick={() => navigate("/lab4/edit")}
+          onClick={handleEditClick}
   >Edit</Button>
-      
         <Button 
             variant="danger"
-           
-            className="ms-1"onClick={(e)=>dispatch({
-              type:"delete",
-              id:id
-            })} >
+            className="ms-1"onClick={handleDeleteClick}
+             >
           Delete
         </Button>
 

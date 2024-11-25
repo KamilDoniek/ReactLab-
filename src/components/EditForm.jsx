@@ -1,63 +1,66 @@
-import { useForm } from "react-hook-form";
-import { useContext,useState } from "react";
+import { useForm } from 'react-hook-form';
+import Button from 'react-bootstrap/Button';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useContext } from 'react';
 import AppContext from "../data/AppContext";
 
-// eslint-disable-next-line react/prop-types
-function EditForm({initialData}) {
-    const [isSending, setSending] = useState(false);
+function EditForm() {
+  const navigate = useNavigate();
+  const location = useLocation(); 
+  const { dispatch } = useContext(AppContext);
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
-        defaultValues: initialData || {}, 
-      });
-    
-      const dispatch = useContext(AppContext).dispatch;
-    
-      const onSubmit = async (data) => {
-        console.log(data)
-        const { title } = data; 
-    
-        if (!title.startsWith(title.toUpperCase())) {
-          errors.title = 'Tytul zadania musi byc z wielkiej litery!'; 
-          return;
-        }
-    
-        setSending(true);
-        await new Promise(res => setTimeout(res, 1000)); 
-    
-        dispatch({
-          type: "edit",
-          data, 
-        });
-        setSending(false);
-        };
-    return (  
-        <>
-        <h1>Edit Form</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="title">tytul zadania</label>
-        <input
-          {...register('title', {
-            required: 'Tytuł jest wymagany.',
-            minLength: {
-              value: 3,
-              message: 'Tytuł musi mieć co najmniej 3 znaki.',
-            },
-            maxLength: {
-              value: 20,
-              message: 'Tytuł może mieć maksymalnie 20 znaków.',
-            },
-          })}
-          name="title"
-        />
-                {errors.title && <p className="text-danger">{errors.title.message}</p>}
-            
-            <button type="submit" disabled={isSending}>
+  const { id, birth, eyes } = location.state || {};
 
-            </button>
-        </form>
 
-        </>
-    );
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm({
+    defaultValues: {
+      birthDate: birth,  
+      eyeColor: eyes     
+    }
+  });
+
+  const onSubmit = (data) => {
+    dispatch({
+      type: 'updatePerson',
+      id,
+      birth: data.birthDate,
+      eyes: data.eyeColor
+    });
+
+    navigate('/lab1');  
+  };
+
+  const handleCancelClick = () => {
+    navigate('/lab1');  
+  };
+
+  return (
+    <div>
+      <h2>Edit Person</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label>data  urodzin:</label>
+          <input
+            type="date"
+            {...register('birthDate', { required: 'data urodzin jest wymagana' })}  
+          />
+          {errors.birthDate && <p>{errors.birthDate.message}</p>}  
+        </div>
+
+        <div>
+          <label>kolor oczu:</label>
+          <input
+            type="text"
+            {...register('eyeColor', { required: 'kolor oczu jest wymagany' })}  
+          />
+          {errors.eyeColor && <p>{errors.eyeColor.message}</p>}  
+        </div>
+
+        <Button variant="success" type="submit">Save</Button>
+        <Button variant="secondary" onClick={handleCancelClick}>Cancel</Button>
+      </form>
+    </div>
+  );
 }
 
 export default EditForm;
