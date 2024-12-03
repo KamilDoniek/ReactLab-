@@ -1,57 +1,68 @@
-import { useContext, useState } from "react";
+import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
+import Button from 'react-bootstrap/Button';
 import AppContext from "../data/AppContext";
 
+
 function CreateForm() {
-    const [errors, setErrors] = useState([]);
-    const [isSending, setSending] = useState(false);
-    const dispatch = useContext(AppContext).dispatch;
+  const { dispatch } = useContext(AppContext); 
+  const navigate = useNavigate();
 
-    const onSubmit = async e => {
-        const err = [];
-        e.preventDefault();
-        const data = new FormData(e.target);
-        const title = data.get("title");
-        console.log(title)
-        setErrors([]);
-        if(title.slice(0,1) !== title.slice(0,1).toUpperCase()) {
-            err.push("Tytul zadania musi byc z wielkiej litery!")
-        }
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = (data) => {
+    const newPerson = {
+      id: null, 
+      name: data.name,
+      birth: data.birthDate,
+      eyes: data.eyeColor,
+      rating: 0, 
+    };
 
-        if(err.length != 0) {
-            console.log("return");
-            setErrors(err);
-            return;
-        }
-        setErrors([]);
-        
-        setSending(true);
-        await new Promise(res => setTimeout(res, 1000));
+    dispatch({
+      type: 'add', 
+      person: newPerson,
+    });
 
-        dispatch({
-            type: "add",
-            data: {}
-        });
-        setSending(false);
-        
-        for(let key of data.keys()) {
-            e.target[key].value ="";
-        }
-    }
+    navigate('/lab1');
+  };
 
-    return (  
-        <>
-        <div className="text-danger">
-            {errors.map(e => <span>{e}</span>)}
+  return (
+    <div>
+      <h2>Add New Person</h2>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <label>Name:</label>
+          <input
+            type="text"
+            {...register('name', { required: 'Name is required' })}
+          />
+          {errors.name && <p>{errors.name.message}</p>}
         </div>
-        
-        <form onSubmit={onSubmit}>
-            <label htmlFor="title">tytul zadania</label>
-            <input name="title" required minLength="3" maxLength="20"></input>
 
-            <button disabled={isSending} type="submit">Zapisz</button>
-        </form>
-    </>
-    );
+        <div>
+          <label>Birth Date:</label>
+          <input
+            type="date"
+            {...register('birthDate', { required: 'Birth date is required' })}
+          />
+          {errors.birthDate && <p>{errors.birthDate.message}</p>}
+        </div>
+
+        <div>
+          <label>Eye Color:</label>
+          <input
+            type="text"
+            {...register('eyeColor', { required: 'Eye color is required' })}
+          />
+          {errors.eyeColor && <p>{errors.eyeColor.message}</p>}
+        </div>
+
+        <Button variant="primary" type="submit">Add Person</Button>
+      </form>
+    </div>
+  );
 }
 
 export default CreateForm;
+

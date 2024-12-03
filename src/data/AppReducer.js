@@ -21,7 +21,12 @@ export default function AppReducer(state,action){
         person.id === action.id
           ? { ...person, birth: action.birth, eyes: action.eyes }  
           : person
-      );
-    
+      )
+      case 'add': {
+    const newId = state.length > 0 ? Math.max(...state.map(person => person.id)) + 1 : 1;
+    action.person.id = newId;
+        return [...state, action.person];  
+
+      }
     }
 }
