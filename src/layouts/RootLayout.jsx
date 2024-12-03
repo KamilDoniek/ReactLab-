@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Lab1Page from '../pages/Lab1Page';
 import Lab2Page from '../pages/Lab2Page';
 import Lab3Page from '../pages/Lab3Page';
+import Lab4Page from '../pages/Lab4Page';
 import Home from '../pages/Home';
 function RootLayout( {children}) {
   const menuItems = [
@@ -35,6 +36,13 @@ function RootLayout( {children}) {
           url:"/lab3",
           urlPattern: "/",
           element: <Lab3Page/>
+        },
+        {
+          id: 5,
+          label: "Laboratorium 4",
+          url:"/lab4/add",
+          urlPattern: "/",
+          element: <Lab4Page/>
         }
     ];
     return (
